@@ -102,7 +102,20 @@
 							'</div>' +
 						'</div>\n';
 				} else {
-					txt += '<div class="media">No match found for the word "' + data.word+ '"</div>\n'
+					// txt += '<div class="media">No match found for the word "' + data.word+ '"</div>\n'
+					txt += 
+						'<div class="media">' +
+							'<a class="pull-left" href="#">' +
+								'<img class="media-object" src="' + found.cover_url + '" />' +
+							'</a>' +
+							'<div class="media-body">' + 	
+								'<h4 class="media-heading">'+
+									'<a href="' + found.uri + '">' + found.name + '</a>'+
+								'</h4>' +
+								'Album: <a href="' + found.album_uri + '">' + found.album +'</a>'+
+								'<br />Artist: <a href="' + found.artist_uri + '">' + found.artist+'</a>' +
+							'</div>' +
+						'</div>\n';
 				}
 			});
 
